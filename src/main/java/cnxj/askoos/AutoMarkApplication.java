@@ -1,4 +1,4 @@
-package cnxj.askoos.automark;
+package cnxj.askoos;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

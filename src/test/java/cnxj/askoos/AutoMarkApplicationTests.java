@@ -1,4 +1,4 @@
-package cnxj.askoos.automark;
+package cnxj.askoos;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

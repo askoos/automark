@@ -1,4 +1,4 @@
-package cnxj.askoos.automark.model;
+package cnxj.askoos.model;
 
 import java.io.Serializable;
 
