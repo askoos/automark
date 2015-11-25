@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F://automark/automark.iml" filepath="F://automark/automark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/automark.iml" filepath="$PROJECT_DIR$/automark.iml" />
     </modules>
   </component>
 </project>

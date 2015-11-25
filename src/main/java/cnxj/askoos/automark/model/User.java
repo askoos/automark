@@ -12,6 +12,17 @@ public class User implements Serializable {
     private String username;// 用户名
     private Integer age;// 年龄
 
+    public User() {
+        super();
+    }
+
+    public User(Long id, String username, Integer age) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.age = age;
+    }
+
     public Long getId() {
         return id;
     }
