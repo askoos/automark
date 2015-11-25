@@ -11,7 +11,6 @@ import org.springframework.core.io.ClassPathResource;
  * Created by Askoos on 2015/11/25.
  */
 @Configuration
-
 @EnableCaching // 标注启动了缓存
 public class CacheConfiguration {
 
