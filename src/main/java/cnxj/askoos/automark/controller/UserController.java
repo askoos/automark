@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Askoos on 2015/11/25.
  */
@@ -29,10 +32,14 @@ public class UserController {
         return user;
     }
 
-    @RequestMapping("/showUser")
+    @RequestMapping("/findAll")
     @ResponseBody
-    public User showUser() {
-        return new User(11L, "Askoos", 36);
+    public List findAll() {
+        List<User> list = new ArrayList<User>();
+        list.add(new User(11L, "Askoos", 36));
+        list.add(new User(12L, "Keith", 35));
+        list.add(new User(13L, "Aikmin", 34));
+        return list;
     }
 
     public static void main(String[] args) {
