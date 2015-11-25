@@ -12,6 +12,7 @@ import java.util.Date;
 
 /**
  * Created by Askoos on 2015/11/25.
+ * 使用spring的定时任务
  */
 @Component
 @Configurable
