@@ -1,15 +1,23 @@
 package cnxj.askoos.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
  * Created by Askoos on 2015/11/25.
  * 用户模型
  */
+@Entity
+@Table(name = "users")
 public class User implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;// ID
+    @NotNull
     private String username;// 用户名
+    @NotNull
     private Integer age;// 年龄
 
     public User() {
