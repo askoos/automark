@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by Askoos on 2015/11/25.
+ * 用户模型
  */
 public class User implements Serializable {
 
