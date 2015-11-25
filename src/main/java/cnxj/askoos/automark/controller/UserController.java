@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -27,6 +28,13 @@ public class UserController {
         user.setAge(35);
         log.info(user.toString());
         return user;
+    }
+
+    @RequestMapping("/showUser")
+    public
+    @ResponseBody
+    User showUser() {
+        return new User(11,"Askoos", 36);
     }
 
     public static void main(String[] args) {
