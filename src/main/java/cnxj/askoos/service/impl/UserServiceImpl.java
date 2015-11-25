@@ -34,7 +34,7 @@ public class UserServiceImpl  implements IUserService {
         data.put(id, user);
     }
 
-    @Cacheable(value = USER_CACHE_NAME, key = "#user.getId()+'thing'")
+    @Cacheable(value = USER_CACHE_NAME, key = "#user.getId()+'user'")
     @Override
     public User findById(Long id) {
         System.err.println("没有走缓存！" + id);
@@ -49,7 +49,7 @@ public class UserServiceImpl  implements IUserService {
 
 
     @Override
-    @CachePut(value = USER_CACHE_NAME, key = "#user.getId()+'User'")
+    @CachePut(value = USER_CACHE_NAME, key = "#user.getId()+'user'")
     @CacheEvict(value = USER_CACHE_NAME, key = USER_ALL_KEY)
     public User update(User user) {
         System.out.println(user);
