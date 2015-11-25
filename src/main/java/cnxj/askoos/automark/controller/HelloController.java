@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by Askoos on 2015/11/25.
  */
@@ -22,6 +26,17 @@ public class HelloController {
     public String sayHello(@PathVariable("username") String username) {
         log.info("usernname: " + username);
         return "Hello " + username + "!";
+    }
+
+    @RequestMapping("/say")
+    public String say(Map<String, Object> model) {
+        List<String> list = new ArrayList();
+        list.add("Hello Askoo!");
+        list.add("Hello Keith!");
+        list.add("Hello Aikmin!");
+        // 将数据存放map里面，可以直接在velocity页面，使用key访问
+        model.put("data", list);
+        return "hello";
     }
 
     public static void main(String[] args) {
