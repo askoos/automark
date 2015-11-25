@@ -41,10 +41,40 @@ public class UserServiceImpl  implements IUserService {
         return data.get(id);
     }
 
+    @Override
+    public <S extends T> S save(S s) {
+        return null;
+    }
+
+    @Override
+    public <S extends T> Iterable<S> save(Iterable<S> iterable) {
+        return null;
+    }
+
+    @Override
+    public User findOne(Long aLong) {
+        return null;
+    }
+
+    @Override
+    public boolean exists(Long aLong) {
+        return false;
+    }
+
     @Cacheable(value = USER_CACHE_NAME, key = USER_ALL_KEY)
     @Override
     public List<User> findAll() {
         return Lists.newArrayList(data.values());
+    }
+
+    @Override
+    public Iterable<User> findAll(Iterable<Long> iterable) {
+        return null;
+    }
+
+    @Override
+    public long count() {
+        return 0;
     }
 
 
@@ -61,6 +91,21 @@ public class UserServiceImpl  implements IUserService {
     @Override
     public void delete(Long id) {
         data.remove(id);
+    }
+
+    @Override
+    public void delete(User user) {
+
+    }
+
+    @Override
+    public void delete(Iterable<? extends User> iterable) {
+
+    }
+
+    @Override
+    public void deleteAll() {
+
     }
 
 }
