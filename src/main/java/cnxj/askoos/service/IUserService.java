@@ -1,4 +1,4 @@
-package cnxj.askoos.cnxj.askoos.service;
+package cnxj.askoos.service;
 
 import cnxj.askoos.model.User;
 
