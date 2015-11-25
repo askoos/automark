@@ -20,6 +20,11 @@ public class AutoMarkApplication {
     private static Logger log = LoggerFactory.getLogger(AutoMarkApplication.class);
 
     public static void main(String[] args) {
+
+//        SpringApplication springApplication = new SpringApplication(AutoMarkApplication.class);
+//        springApplication.run(args);
+
+
         // 启动Spring Boot项目的唯一入口
         SpringApplication.run(AutoMarkApplication.class, args);
         log.info("启动AutoMark项目");
