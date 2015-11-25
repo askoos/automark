@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class HelloController {
     private static Logger log = LoggerFactory.getLogger(HelloController.class);
 
     @RequestMapping("/sayHello/{username}")
+    @ResponseBody //将结果直接返回给调用着
     public String sayHello(@PathVariable("username") String username) {
         log.info("usernname: " + username);
         return "Hello " + username + "!";
