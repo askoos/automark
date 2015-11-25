@@ -6,7 +6,7 @@
     <groupId>cnxj.askoos.automark</groupId>
     <artifactId>automark</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>AutoMark</name>
     <description>Demo project for Spring Boot</description>
@@ -29,6 +29,7 @@
 
     <dependencies>
         <!-- web容器支持 -->
+        <!-- web程序的启动项依赖，通过此依赖可引入内嵌的tomcat等web必须的jars -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -45,6 +46,16 @@
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
 
+        <!-- spring-data-jpa程序的启动项依赖，底层为hibernate实现，若不使用此框架则可以依赖其他的orm框架 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- mysql依赖，使用spring-data-jpa需要指定一个数据库方言，用于连接数据库，即mysql驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
