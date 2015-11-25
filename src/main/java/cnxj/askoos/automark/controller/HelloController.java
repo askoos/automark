@@ -31,7 +31,7 @@ public class HelloController {
     @RequestMapping("/say")
     public String say(Map<String, Object> model) {
         List<String> list = new ArrayList();
-        list.add("Hello Askoo!");
+        list.add("Hello Askoos!");
         list.add("Hello Keith!");
         list.add("Hello Aikmin!");
         // 将数据存放map里面，可以直接在velocity页面，使用key访问
