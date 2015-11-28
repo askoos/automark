@@ -43,6 +43,7 @@ public class HelloController {
     public static void main(String[] args) {
         SpringApplication.run(HelloController.class);
 	System.out.println("Hello Askoos!");
+	System.out.println("Hello Askoos!");
     }
 
 }
