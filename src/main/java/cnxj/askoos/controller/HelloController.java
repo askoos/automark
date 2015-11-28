@@ -1,4 +1,4 @@
-package cnxj.askoos.controller;
+﻿package cnxj.askoos.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,6 +42,7 @@ public class HelloController {
 
     public static void main(String[] args) {
         SpringApplication.run(HelloController.class);
+	System.out.println("Hello Askoos!");
     }
 
 }
